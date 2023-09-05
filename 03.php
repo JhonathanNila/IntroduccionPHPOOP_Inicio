@@ -41,22 +41,17 @@ include 'includes/header.php';
         }
     }
 
-    echo Producto::obtenerProducto();
-
+    echo  Producto::obtenerProducto();
     $producto = new Producto('Tablet', 200, true, '');
     // $producto -> mostrarProducto();
-    echo $producto->getNombre();
 
-    echo "<pre>";
-    var_dump($producto);
-    echo "</pre>";
+    echo $producto->getNombre();
+    $producto -> setNombre('Nuevo Nombre');
+
 
     $producto2 = new Producto('Monitor Curvo', 300, true, 'monitorCurvo.jpg');
     // $producto2 -> mostrarProducto();
+
     echo $producto2->getNombre();
 
-    // echo "<pre>";
-    // var_dump($producto2);
-    // echo "</pre>";
-    
 include 'includes/footer.php';
